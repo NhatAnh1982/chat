@@ -1,18 +1,25 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chatgptapp">
+plugins {
+    id 'com.android.application'
+}
 
-    <uses-permission android:name="android.permission.INTERNET" />
+android {
+    compileSdk 33
 
-    <application
-        android:allowBackup="true"
-        android:label="ChatGPTApp"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-</manifest>
+    defaultConfig {
+        applicationId "com.example.chatgptapp"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+}
