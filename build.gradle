@@ -1,6 +1,22 @@
 plugins {
     id 'com.android.application'
 }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0' // hoặc phiên bản phù hợp
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 
 android {
     compileSdk 33
@@ -23,3 +39,4 @@ android {
 dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
 }
+
